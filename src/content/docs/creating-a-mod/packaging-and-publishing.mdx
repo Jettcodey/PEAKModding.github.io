@@ -12,13 +12,14 @@ The most preferred way to publish PEAK mods is through [Thunderstore](https://th
 Before uploading your mod, you need to have built it into a `.dll`.
 
 
-## Packaging With TCLI
+## Packaging With ThunderPipe.Sdk
 
-The [PEAK BepInEx Template](<https://github.com/PEAKModding/BepInExTemplate>) comes with Thunderstore packaging built-in, using [TCLI](<https://github.com/thunderstore-io/thunderstore-cli>).
+The [PEAK BepInEx Template](<https://github.com/PEAKModding/BepInExTemplate>) comes with Thunderstore packaging built-in, using [ThunderPipe](<https://github.com/WarperSan/ThunderPipe>).
 
 If you used the template, you can build Thunderstore packages by running:
+
 ```sh
-dotnet build -c Release -target:PackTS -v d
+dotnet build -c Release -v d
 ```
 
 :::note
@@ -28,7 +29,7 @@ You can learn about different build options with `dotnet build --help`.
 
 The built package will be found at `artifacts/thunderstore/`.
 
-Once you have the ZIP package, you can jump straight into [Uploading to Thunderstore](#uploading-to-thunderstore)!
+Once you have the ZIP package and have confirmed that it looks correct, you can jump straight into [Uploading to Thunderstore](#uploading-to-thunderstore)!
 
 ## Manual Packaging
 
@@ -144,6 +145,20 @@ On Windows:
 - Right-click → Send to → Compressed (zipped) folder
 
 ## Uploading to Thunderstore
+
+### Uploading with ThunderPipe.Sdk
+
+ThunderPipe.Sdk can also publish your package. This can be done easily by adding `-p:PublishTS=true` to the build command for your project if you used the template:
+
+```sh
+dotnet build -c Release -v d -p:PublishTS=true
+```
+
+:::note
+Publishing to Thunderstore via ThunderPipe.Sdk requires that you've set up your Thunderstore token for your Thunderstore team on your machine. See the `Config.Build.user.props` file in your project for setup instructions!
+:::
+
+### Uploading Manually
 
 To upload a mod, first create a Thunderstore team by logging in and going here:  
 https://thunderstore.io/settings/teams/create/
