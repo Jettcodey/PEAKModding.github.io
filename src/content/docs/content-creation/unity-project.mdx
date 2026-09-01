@@ -9,6 +9,7 @@ import { Aside, LinkCard, LinkButton, FileTree } from '@astrojs/starlight/compon
 
 A guide for setting up your PEAK Unity Project to create mods for PEAK.\
 Setting up a Unity Project is required to allow the custom creation of items and a custom design for status effects.
+
 <LinkCard
   title="PEAK Project Patcher Thread"
   href="https://ptb.discord.com/channels/1363179626435707082/1510686814162128907"
@@ -19,7 +20,9 @@ Setting up a Unity Project is required to allow the custom creation of items and
   href="https://github.com/Jettcodey/unity-peak-project-patcher"
   description="View the PEAK Project Patcher GitHub Repository"
 />
+
 The finished PEAK Unity Project functionality and custom creations are limited to some extent. Make sure to check the list below.
+
 <details>
 <summary>List of Current Limitations (Click to Expand)</summary>
 - Editor Play-Mode Starts but UI Elements and Interaction is Limited to non working.
@@ -28,8 +31,11 @@ The finished PEAK Unity Project functionality and custom creations are limited t
   - Replacements need to be made or you can try importing shaders gathered following this guide on the PEAK Modding Discord Server:\
     https://discord.com/channels/1363179626435707082/1444836081559408802
 </details>
+
 ### Prerequisites
+
 Download and Install the following:
+
 - **[Git](https://git-scm.com/downloads)**
 - **[Unity Hub](https://unity.com/download)**
 - **[Unity Editor 6000.3.15f1](https://unity.com/releases/editor/whats-new/6000.3.15f1)**
@@ -38,6 +44,7 @@ Download and Install the following:
 Make a copy of your PEAK installation and open the `PEAK_Data` folder inside the copied directory.\
 In this folder, locate the `level` and `sharedassets` files numbered **0 through 5**. Delete all other `level` and `sharedassets` files (numbered 6 and upwards).\
 **Skipping this step will increase the patch time significantly.**
+
 <details>
 <summary>Expected `PEAK_Data` folder structure</summary>
 <FileTree>
@@ -80,7 +87,9 @@ In this folder, locate the `level` and `sharedassets` files numbered **0 through
 </FileTree>
 </details>
 </Aside>
+
 ### Unity Project Setup
+
 Create a new Unity project with the following configuration:
   - **Editor Version**: `6000.3.15f1`
   - **Project Location**: Local Project
@@ -108,7 +117,9 @@ If you had Unity open before installing git, it will complain about git not bein
   ```
 
 Please make sure to **only use** these git links when setting up the PEAK Unity Project Patcher!
+
 ### Run Project Patcher
+
 Navigate to the Menubar and click **`Tools > Unity Project Patcher > Configs > UPPatcherUserSettings`**.
 - You will now see new options in the Inspector panel. Leave all the Pre filled fields as they are and only Enter the path to your **prepared/copied** game folder.
 
@@ -117,7 +128,9 @@ Back to the Menubar and open the Patcher Window by going to **`Tools > Unity Pro
   Click on **`Enable BepInEx`** at the bottom of the window and wait for the process to finish.
 
 Press **`Run Patcher`** to start the patching process.
+
 ##### Expected patch behavior:
+
 - Fresh patch time: ~45-60 minutes.
 - Unity will restart approximately 5-6 times during the process.
 - Simply click **OK** on the 4 popups when prompted after starting the process.
