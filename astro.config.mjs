@@ -57,5 +57,7 @@ export default defineConfig({
 	],
 	// Whenever a page changes, add it to the redirects.
 	// https://docs.astro.build/en/guides/routing/#redirects
-	redirects: { }
+	redirects: { 
+		"/content-creation/ripping-peak": "/content-creation/unity-project"
+	}
 });
